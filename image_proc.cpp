@@ -3,6 +3,9 @@
 #include <string> 
 using namespace std;
 
+/*Note: This Kernel ou Gaussian filter is NOT normalized. To normalize, divide all the elements in the filter by the sum of all of them (1/16).
+Normalization ensures that the overall brightness of the image is preserved after applying the filter. It is used because when convolutioning 
+with normal kernel the resulting values can become larger or smaller than the original values in the image. */
 int gaussian_filter(float matrix[][6], int n) {
     // prints the matrix after the convolution
     int length_filter = 3;
@@ -17,7 +20,7 @@ int gaussian_filter(float matrix[][6], int n) {
 
     /*For every element in the matrix, from row position 0 to (n - length_filter) and column position 0 to (n - length_filter), we will multiply what the 'mask' covers
     with the equivalent positions in the orignal matrix. Then, we sum all of these values (9 values in this case) and that's our element in the result matrix. We do this
-    9 times. This process is called Convolution
+    9 times. This process is called Convolution (3x3).
     The starting point in the original matrix is [0][0] and we use the filter until position [n - length_filter][n - length_filter].
     */ 
     for (int i = 0; i < (n-2); i++) {
@@ -82,6 +85,7 @@ int main() {
                         {4, 2, 1, 6, 2, 8},
                         {2, 4, 5, 2, 3, 9}};
 
+    // 1. Using Gaussian filter
     int matrix_length = gaussian_filter(matrix, 6); 
 
     return 0;
