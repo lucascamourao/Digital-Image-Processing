@@ -17,7 +17,7 @@ Prof. Dr. Creto Augusto Vidal
 
 ## Algorythm 2: 
 1) Smooth the image by applying a Gaussian filter
-2) Na imagem do passo 1, aplique o filtro convolucional de Laplace, gerando uma imagem/matriz A
+2) In the image from step 1, apply the Laplace convolutional filter, generating an image/matrix A
 3) Por simplicidade, gere uma imagem/matriz, B, percorrendo a imagem A e escrevendo em B
 <br> 1. caso o pixel correspondente da matriz A seja diferente de 0 dentro de uma tolerância (0.0001, por exemplo)
 <br> 0. cado o pixel correspondente da matriz A seja igual a 0 dentro de uma tolerância (0.0001, por exemplo).
