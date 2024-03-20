@@ -5,14 +5,14 @@ Prof. Dr. Creto Augusto Vidal
 ## Algorythm 1: 
 1) Smooth the image by applying a Gaussian filter
 2) On the image from step 1, apply the Gradient convolutional filter
-<br> 2.1) um filtro de Sobel para a derivada na direção x, gerando uma imagem/matriz, A, com os valores da derivada em cada pixel/elemento da matriz;
-<br> 2.2) um filtro de Sobel para a derivada na direção y, gerando uma imagens/matriz, B, com os valores da derivada em cada pixel/elemento da matriz;
-<br> 2.3) em cada uma das matrizes, A e B, eleve ao quadrado os valores dos elementos;
-<br> 2.4) some as duas matrizes A e B modificadas no passo 2.3 e tire a raiz quadrada  de cada elemento dessa matriz, C
+<br> 2.1) a Sobel filter for the derivative in the x direction, generating an image/matrix, A, with the values of the derivative in each pixel/element of the matrix;
+<br> 2.2) a Sobel filter for the derivative in the y direction, generating an image/matrix, B, as the values of the derivative in each pixel/element of the matrix;
+<br> 2.3) In each of two matrices, A and B, square the values of their elements;
+<br> 2.4) add the two matrices A and B modified in step 2.3 and take the square root of each element of this matrix, C
 3) Choose a value (float) for the threshold and
 4) generate a final matrix, D, with 
-<br> pixel 0 caso o pixel correspondente da matriz C seja menor do que o threshold.
-<br> pixel 1. caso o pixel correspondente da matriz C seja maior do que o threshold.
+<br> pixel 0 if the corresponding pixel of matrix C is smaller than the threshold.
+<br> pixel 0 if the corresponding pixel of matrix C is greater than the threshold.
 
 
 ## Algorythm 2: 
