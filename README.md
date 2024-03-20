@@ -2,7 +2,6 @@
 ### Edge Detection - Numeric Methods II 2024.1
 Prof. Dr. Creto Augusto Vidal
 - Lucas Cabral Amador Mourão (5th semester)
-<br>
 
 ## Algorithm 1: 
 1) Smooth the image by applying a Gaussian filter
