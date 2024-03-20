@@ -2,8 +2,9 @@
 ### Edge Detection - Numeric Methods II 2024.1
 Prof. Dr. Creto Augusto Vidal
 - Lucas Cabral Amador Mourão (5th semester)
-<br> 
-## Algorythm 1: 
+<br>
+
+## Algorithm 1: 
 1) Smooth the image by applying a Gaussian filter
 2) On the image from step 1, apply the Gradient convolutional filter
 <br> 2.1) a Sobel filter for the derivative in the x direction, generating an image/matrix, A, with the values of the derivative in each pixel/element of the matrix;
@@ -16,7 +17,7 @@ Prof. Dr. Creto Augusto Vidal
 <br> pixel 0 if the corresponding pixel of matrix C is greater than the threshold.
 
 
-## Algorythm 2: 
+## Algorithm 2: 
 1) Smooth the image by applying a Gaussian filter
 2) In the image from step 1, apply the Laplace convolutional filter, generating an image/matrix A
 3) For simplicity, generate an image/matrix, B, by looping through image A and writing to B
