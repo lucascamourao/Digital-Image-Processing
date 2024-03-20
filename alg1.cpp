@@ -59,7 +59,7 @@ int Gx_Sobel(float matrix[][4], int n, float result[][2]) {
         }
     }
 
-    cout << "Matrix after de Sobel filter in the x direction:\n";
+    cout << "Matrix after the Sobel filter in the x direction:\n";
     for (int k = 0; k < (n-2); k++) {
         for (int l = 0; l < (n-2); l++) {
             cout << result[k][l] << " "; 
