@@ -1,6 +1,7 @@
 # Digital Image Processing
 ### Edge Detection - Numeric Methods II 2024.1
 Prof. Dr. Creto Augusto Vidal
+- Lucas Cabral Amador Mourão (5th semester)
 <br> 
 ## Algorythm 1: 
 1) Smooth the image by applying a Gaussian filter
@@ -18,9 +19,9 @@ Prof. Dr. Creto Augusto Vidal
 ## Algorythm 2: 
 1) Smooth the image by applying a Gaussian filter
 2) In the image from step 1, apply the Laplace convolutional filter, generating an image/matrix A
-3) Por simplicidade, gere uma imagem/matriz, B, percorrendo a imagem A e escrevendo em B
-<br> 1. caso o pixel correspondente da matriz A seja diferente de 0 dentro de uma tolerância (0.0001, por exemplo)
-<br> 0. cado o pixel correspondente da matriz A seja igual a 0 dentro de uma tolerância (0.0001, por exemplo).
+3) For simplicity, generate an image/matrix, B, by looping through image A and writing to B
+<br> 1. if the corresponding pixel of matrix A is different from 0 within a tolerance (0.0001, for example)
+<br> 0. if the corresponding pixel of matrix A is equal to 0 within a tolerance (0.0001, for example).
 
 
 ### In both algorithms, the Edges will be represented by black pixels and the other pixels will be white.
