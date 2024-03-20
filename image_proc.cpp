@@ -59,7 +59,6 @@ int Gx_Sobel(float matrix[][4], int n, float result[][2]) {
         }
     }
 
-    // print matrix
     cout << "Matrix after de Sobel filter in the x direction:\n";
     for (int k = 0; k < (n-2); k++) {
         for (int l = 0; l < (n-2); l++) {
@@ -88,7 +87,6 @@ int Gy_Sobel(float matrix[][4], int n, float result[][2]) {
         }
     }
 
-    // print matrix
     cout << "Matrix after de Sobel filter in the y direction:\n";
     for (int k = 0; k < (n-2); k++) {
         for (int l = 0; l < (n-2); l++) {
@@ -123,6 +121,7 @@ int Sobel_Filter(float matrix_Gx[][2], float matrix_Gy[][2], float result[][2], 
     for (int x = 0; x < 4; x++) {
         for (int y = 0; y < 4; y++) {
             result[x][y] = sqrt(matrix_Gx[x][y] + matrix_Gy[x][y]); 
+            result[x][y] = round(result[x][y] * 1000)/ 1000;
         }
     }
 
@@ -142,6 +141,8 @@ int main() {
     float result_gx[2][2];
     float result_gy[2][2];
     float result_sobel[2][2];
+    float matrix_D[2][2];
+    float threshold;
 
     float matrix[6][6] = {{3, 0, 1, 2, 7, 4}, 
                         {1, 5, 8, 9, 3, 1}, 
@@ -160,6 +161,28 @@ int main() {
 
     Sobel_Filter(result_gx, result_gy, result_sobel, guassian_length);
 
+    // Choosing the threshold
+    cout << "Enter the threshold: \n";
+    cin >> threshold;
+
+    // Generating the matrix D
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            if (result_sobel[i][j] < threshold) {
+                matrix_D[i][j] = 0;
+            }
+            else {
+                matrix_D[i][j] = 1;
+            }
+        }
+    }
+
+    for (int k = 0; k < 2; k++) {
+        for (int l = 0; l < 2; l++) {
+            cout << matrix_D[k][l] << " ";
+        }
+        cout << "\n";
+    }
 
     return 0;
 }
