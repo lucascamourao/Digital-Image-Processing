@@ -161,11 +161,11 @@ int main() {
 
     Sobel_Filter(result_gx, result_gy, result_sobel, guassian_length);
 
-    // Choosing the threshold
+    // 3. Choosing the threshold
     cout << "Enter the threshold: \n";
     cin >> threshold;
 
-    // Generating the matrix D
+    // 4. Generating the matrix D
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             if (result_sobel[i][j] < threshold) {
