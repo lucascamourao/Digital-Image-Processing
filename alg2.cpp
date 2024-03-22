@@ -41,6 +41,8 @@ int Gaussian_Filter(float matrix[][6], int n, float result[][4]) {
     // That's why the function will be returning the length, which can be used for future convolutions. 
 }
 
+// Using second order derivative to determine whether an edge pixel lies on the light or dark side of an edge. Therefore, we use it to measure the rate of change of the image intensity.
+// ∇²f(x, y) = ∂²f/∂x² + ∂²f/∂y²
 int Laplace_Filter(float matrix[][4], int n, float result[][2]) {
     int length_filter = 3;
     float filter[length_filter][length_filter] = {{0, 1, 0}, {1, -4, 1}, {0, 1, 0}};
